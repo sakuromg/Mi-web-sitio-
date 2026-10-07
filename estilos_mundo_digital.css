@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #172b4d;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    margin-bottom: 8px;
+}
+
+nav {
+    background: #0f172a;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+.menu a:hover {
+    background: #294a7a;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 190px;
+    background: #0f172a;
+    list-style: none;
+    z-index: 10;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.contenido {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.principal, .secundario {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.10);
+}
+
+.principal > h2, .secundario h2 {
+    color: #172b4d;
+    margin-bottom: 18px;
+}
+
+.tema {
+    border: 1px solid #d9e0ea;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 25px;
+    background: #fafcff;
+}
+
+.tema h3 {
+    color: #172b4d;
+    margin-bottom: 12px;
+    font-size: 1.35rem;
+}
+
+.tema img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.boton {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 9px 14px;
+    background: #172b4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.boton:hover {
+    background: #294a7a;
+}
+
+.video iframe {
+    width: 100%;
+    height: 315px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.secundario {
+    height: fit-content;
+}
+
+.secundario p {
+    margin-bottom: 20px;
+}
+
+.secundario ul {
+    padding-left: 25px;
+}
+
+footer {
+    background: #172b4d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .submenu {
+        position: static;
+    }
+
+    .menu li:hover .submenu {
+        display: block;
+    }
+}
